@@ -46,3 +46,9 @@ export const replyToMessage = async (id, replyText, token) => {
   if (!response.ok) throw new Error("Failed to send reply");
   return response.json();
 };
+
+export const getCourses = async () => {
+  const response = await fetch(`${API_URL}/courses`);
+  if (!response.ok) throw new Error("Failed to fetch courses");
+  return response.json();
+};

@@ -21,9 +21,10 @@ export const replyToMessage = async (req, res) => {
     });
 
     originalMessage.replied = true;
+    originalMessage.replies.push({ text: replyText });
     await originalMessage.save();
 
-    res.json({ success: true });
+    res.json({ success: true, message: originalMessage });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

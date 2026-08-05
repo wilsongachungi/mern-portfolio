@@ -34,9 +34,10 @@ function AdminDashboard() {
   const handleReply = async (id) => {
     setReplyStatus({ ...replyStatus, [id]: "sending" });
     try {
-      await replyToMessage(id, replyText[id], token);
+      const result = await replyToMessage(id, replyText[id], token);
       setReplyStatus({ ...replyStatus, [id]: "sent" });
-      setMessages(messages.map((m) => (m._id === id ? { ...m, replied: true } : m)));
+      setMessages(messages.map((m) => (m._id === id ? result.message : m)));
+      setReplyText({ ...replyText, [id]: "" });
     } catch (err) {
       setReplyStatus({ ...replyStatus, [id]: "error" });
     }
@@ -73,6 +74,19 @@ function AdminDashboard() {
                 <p className="font-mono text-xs text-accent mb-1">{msg.email}</p>
                 {msg.phone && <p className="font-mono text-xs text-muted mb-3">{msg.phone}</p>}
                 <p className="text-muted leading-relaxed mb-4">{msg.message}</p>
+
+                {msg.replies && msg.replies.length > 0 && (
+                  <div className="mb-4 space-y-2">
+                    {msg.replies.map((reply, i) => (
+                      <div key={i} className="bg-bg border border-border rounded-lg p-4">
+                        <p className="font-mono text-xs text-accent mb-1">
+                          your reply · {new Date(reply.sentAt).toLocaleString()}
+                        </p>
+                        <p className="text-text text-sm leading-relaxed">{reply.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <textarea
                   placeholder="Type your reply..."
