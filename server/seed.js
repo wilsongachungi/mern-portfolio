@@ -124,9 +124,9 @@ const sampleCourses = [
     title: "Backend Development with PHP & Laravel",
     description:
       "A practical, project-driven path into PHP and Laravel — routing, Eloquent ORM, authentication, and building real APIs. For developers who want to work confidently across both JavaScript and PHP ecosystems.",
-    price: 18000,
+    price: 15000,
     currency: "KES",
-    duration: "7 weeks",
+    duration: "4 weeks",
     level: "Intermediate",
     topics: ["PHP", "Laravel", "MySQL", "REST APIs"],
     audience: ["Senior", "College & University", "Working Class"],
@@ -134,10 +134,36 @@ const sampleCourses = [
     category: "Backend",
   },
   {
+    title: "Backend Development with Node.js & Express",
+    description:
+      "A practical, project-driven path into Node.js and Express — routing, middleware, authentication, and building real APIs. For developers who want to work confidently across both JavaScript and PHP ecosystems.",
+    price: 15000,
+    currency: "KES",
+    duration: "4 weeks",
+    level: "Intermediate",
+    topics: ["Node.js", "Express", "JavaScript", "REST APIs"],
+    audience: ["Senior", "College & University", "Working Class"],
+    deliveryMode: ["Online", "Physical"],
+    category: "Backend",
+  },
+  {
+    title: "Frontend Development with React.js",
+    description:
+      "Component-based frontend development with Vue — reactivity, the composition API, routing, and state management. A strong alternative path into modern frontend work for those who prefer Vue's approach over React.",
+    price: 10000,
+    currency: "KES",
+    duration: "5 weeks",
+    level: "Intermediate",
+    topics: ["React.js", "Component-Based Development", "State Management"],
+    audience: ["Senior", "College & University", "Working Class"],
+    deliveryMode: ["Online", "Physical"],
+    category: "Frontend",
+  },
+    {
     title: "Frontend Development with Vue.js",
     description:
       "Component-based frontend development with Vue — reactivity, the composition API, routing, and state management. A strong alternative path into modern frontend work for those who prefer Vue's approach over React.",
-    price: 14000,
+    price: 10000,
     currency: "KES",
     duration: "5 weeks",
     level: "Intermediate",
@@ -150,7 +176,7 @@ const sampleCourses = [
     title: "Vibecoding: Building with AI Tools",
     description:
       "Learn to build real, working software using AI-assisted tools like Lovable, Claude, and Cursor — not as a shortcut around learning to code, but as a genuine modern workflow. How to prompt effectively, debug AI-generated code, and know when to take the wheel yourself.",
-    price: 10000,
+    price: 12000,
     currency: "KES",
     duration: "3 weeks",
     level: "Beginner",
