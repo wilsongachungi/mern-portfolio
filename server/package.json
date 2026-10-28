@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
- "scripts": {
-  "dev": "nodemon server.js",
-  "start": "node server.js",
-  "seed": "node seed.js"
-},
+  "scripts": {
+    "dev": "node init && nodemon server.js",
+    "start": "node init && node server.js",
+    "seed": "node seed.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
